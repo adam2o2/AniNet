@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  AniNet
 //
-//  Created by Safiya May on 1/2/25.
+//  Created by Adam May on 1/2/25.
 //
 
 import SwiftUI

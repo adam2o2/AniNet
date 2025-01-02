@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		83BBD83B2D2758C9006CC13E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 83BBD83A2D2758C9006CC13E /* FirebaseAnalytics */; };
+		83BBD83D2D2758C9006CC13E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 83BBD83C2D2758C9006CC13E /* FirebaseAuth */; };
+		83BBD83F2D2758C9006CC13E /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 83BBD83E2D2758C9006CC13E /* FirebaseCore */; };
+		83BBD8412D2758C9006CC13E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 83BBD8402D2758C9006CC13E /* FirebaseDatabase */; };
+		83BBD8432D2758C9006CC13E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 83BBD8422D2758C9006CC13E /* FirebaseFirestore */; };
+		83BBD8452D2758C9006CC13E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 83BBD8442D2758C9006CC13E /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		83BBD8252D27516A006CC13E /* AniNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +32,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83BBD83B2D2758C9006CC13E /* FirebaseAnalytics in Frameworks */,
+				83BBD83F2D2758C9006CC13E /* FirebaseCore in Frameworks */,
+				83BBD8412D2758C9006CC13E /* FirebaseDatabase in Frameworks */,
+				83BBD8432D2758C9006CC13E /* FirebaseFirestore in Frameworks */,
+				83BBD83D2D2758C9006CC13E /* FirebaseAuth in Frameworks */,
+				83BBD8452D2758C9006CC13E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,12 @@
 			);
 			name = AniNet;
 			packageProductDependencies = (
+				83BBD83A2D2758C9006CC13E /* FirebaseAnalytics */,
+				83BBD83C2D2758C9006CC13E /* FirebaseAuth */,
+				83BBD83E2D2758C9006CC13E /* FirebaseCore */,
+				83BBD8402D2758C9006CC13E /* FirebaseDatabase */,
+				83BBD8422D2758C9006CC13E /* FirebaseFirestore */,
+				83BBD8442D2758C9006CC13E /* FirebaseStorage */,
 			);
 			productName = AniNet;
 			productReference = 83BBD8252D27516A006CC13E /* AniNet.app */;
@@ -94,6 +115,9 @@
 			);
 			mainGroup = 83BBD81C2D27516A006CC13E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 83BBD8262D27516A006CC13E /* Products */;
 			projectDirPath = "";
@@ -248,6 +272,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AniNet/Preview Content\"";
+				DEVELOPMENT_TEAM = GJ9T73Y6DY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -285,6 +310,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AniNet/Preview Content\"";
+				DEVELOPMENT_TEAM = GJ9T73Y6DY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -335,6 +361,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		83BBD83A2D2758C9006CC13E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		83BBD83C2D2758C9006CC13E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		83BBD83E2D2758C9006CC13E /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		83BBD8402D2758C9006CC13E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		83BBD8422D2758C9006CC13E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		83BBD8442D2758C9006CC13E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 83BBD8392D2758C9006CC13E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83BBD81D2D27516A006CC13E /* Project object */;
 }
