@@ -210,7 +210,21 @@ struct Profile: View {
             }
             .padding()
         }
-        .background(Color.black.edgesIgnoringSafeArea(.all))
+        .background(
+            ZStack {
+                if let profileImage = profileImage {
+                    Image(uiImage: profileImage)
+                        .resizable()
+                        .scaledToFill()
+                        .blur(radius: 20) // Add blur to the background image
+                        .overlay(Color.black.opacity(0.5)) // Dark overlay for better contrast
+                        .edgesIgnoringSafeArea(.all) // Extend to the edges
+                } else {
+                    Color.black // Default background color if no image is selected
+                        .edgesIgnoringSafeArea(.all)
+                }
+            }
+        )
         .sheet(isPresented: $isImagePickerPresented) {
             ImagePicker(image: $profileImage)
         }
