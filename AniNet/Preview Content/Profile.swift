@@ -169,6 +169,7 @@ struct Profile: View {
 
 
                 Divider()
+                    .opacity(0) // Hide the Divider
                     .padding(.vertical, 15) // Add vertical padding
 
                 // Recently Watched Section
@@ -204,6 +205,50 @@ struct Profile: View {
                     .frame(height: 200) // Set height for the ScrollView
                 }
                 .offset(y: -10)
+                
+                // Navigation Buttons Section
+                HStack(spacing: 80) { // Adjust spacing as needed
+                    // Home Button
+                    Button(action: {
+                        let generator = UIImpactFeedbackGenerator(style: .light)
+                        generator.impactOccurred()
+                        print("Home button tapped") // Replace with navigation logic
+                    }) {
+                        VStack {
+                            Image("Home") // Replace with your actual image name
+                                .resizable()
+                                .frame(width: 30, height: 30) // Set the desired size
+                        }
+                    }
+
+                    // Search Button
+                    Button(action: {
+                        let generator = UIImpactFeedbackGenerator(style: .light)
+                        generator.impactOccurred()
+                        print("Search button tapped") // Replace with navigation logic
+                    }) {
+                        VStack {
+                            Image("Search") // Replace with your actual image name
+                                .resizable()
+                                .frame(width: 30, height: 30) // Set the desired size
+                        }
+                    }
+
+                    // Profile Button
+                    Button(action: {
+                        let generator = UIImpactFeedbackGenerator(style: .light)
+                        generator.impactOccurred()
+                        print("Profile button tapped") // Replace with navigation logic
+                    }) {
+                        VStack {
+                            Image("Profile") // Replace with your actual image name
+                                .resizable()
+                                .frame(width: 30, height: 30) // Set the desired size
+                        }
+                    }
+                }
+                .padding(.top, 5) // Add padding from the recently watched section
+
 
 
 
