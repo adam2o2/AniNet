@@ -80,6 +80,16 @@ struct Signup: View {
                     EmptyView()
                 }
             }
+            .onAppear {
+                // Check if user is already authenticated
+                if let currentUser = Auth.auth().currentUser {
+                    checkUserInFirestore(uid: currentUser.uid) { exists in
+                        if exists {
+                            self.navigateToProfile = true
+                        }
+                    }
+                }
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
